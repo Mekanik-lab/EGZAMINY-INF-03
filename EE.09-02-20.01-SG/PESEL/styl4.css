@@ -1,0 +1,50 @@
+body {
+    font-family: arial;
+}
+
+#lewy, #prawy {
+    background-color: rgb(255, 127, 80);
+    color: white;
+    width: 50%;
+    height: 410px;
+}
+
+header, main {
+    background-color: rgb(220, 220, 220);
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    clear: both;
+}
+
+main {
+    display: block;
+}
+
+#lewy, #prawy {
+    float: left;
+}
+
+#lewy img {
+    display: block;
+}
+
+#lewy-stopka, #prawy-stopka {
+    background-color: rgb(255, 127, 80);
+    color: white;
+    width: 50%;
+    height: 100px;
+    float: left;
+}
+
+table, td {
+    border: 1px solid rgb(255,127,80);
+    padding: 10px;
+    text-align: center;
+}
+
+a {
+    color: white;
+}
