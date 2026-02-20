@@ -25,6 +25,8 @@
         {
             echo $wiersz['id']. ". " . $wiersz['nazwa'] . ", występuje w :" . $wiersz['wystepowanie'] . "<br>";
         }
+
+        mysqli_close($baza);
         ?>
         <br>
         <ol>
@@ -36,4 +38,5 @@
         <p>Stronę wykonał: 00000000000</p>
     </footer>
 </body>
+
 </html>
