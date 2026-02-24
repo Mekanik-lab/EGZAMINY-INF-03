@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi kosmetyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section id="pierwszy-lewy">
+        <h2>W ofercie</h2>
+        <ul>
+            <li>
+                <a href="twarz.html">Zabiegi na twarz</a>
+                <ol>
+                    <li>Piling</li>
+                    <li>Maska</li>
+                    <li>Regulacja brwi</li>
+                </ol>
+            </li>
+            <li>Masaż</li>
+            <li>Diety oczyszczające</li>
+        </ul>
+        <a href="index.html">Do strony głównej</a>
+    </section>
+    <section id="pierwszy-prawy">
+        <h1>Salon Kosmetyczny</h1>
+    </section>
+    <section id="drugi-prawy">
+        <h2>Sprawdź cenę swojej wizyty</h2>
+        <form>
+            <input type="checkbox" id="piling">
+            <label for="piling">Piling</label>
+            <br>
+            <input type="checkbox" id="maska">
+            <label for="maska">Maska</label>
+            <br>
+            <input type="checkbox" id="masaz">
+            <label for="masaz">Masaż twarzy</label>
+            <br>
+            <input type="checkbox" id="brwi">
+            <label for="brwi">Regulacja brwi</label>
+            <br>
+            <button type="button" onclick="sprawdzCene()">Sprawdź cenę</button>
+            <p id="wynik"></p>
+        </form>
+    </section>
+    <section id="drugi-lewy">
+        <img src="obraz1.jpg" alt="Kosmetyczka">
+    </section>
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+    <script>
+    function sprawdzCene()
+    {
+        const wynik = document.getElementById('wynik');
+        const piling = document.getElementById('piling').checked;
+        const maska = document.getElementById('maska').checked;
+        const masaz = document.getElementById('masaz').checked;
+        const brwi = document.getElementById('brwi').checked;
+        const pilingCena = 45;
+        const maskaCena = 30;
+        const masazCena = 20;
+        const brwiCena = 5;
+        let suma = 0;
+
+        if(piling)
+        {
+            suma += pilingCena;
+        }
+        if(maska)
+        {
+            suma += maskaCena;
+        } 
+        if(masaz)
+        {
+            suma += masazCena;
+        }
+        if(brwi) 
+        {
+            suma += brwiCena;
+        }
+
+        wynik.textContent = `Cena zabiegów: ${suma}`;
+    } 
+    </script>
+</body>
+</html>
