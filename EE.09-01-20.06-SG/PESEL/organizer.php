@@ -40,11 +40,11 @@
             $zapytanie = mysqli_query($baza, $sql);
             while($wiersz = mysqli_fetch_assoc($zapytanie))
             {
-                echo "<section class='dzien'>"
+                echo "<div class='dzien'>"
                 . "<h6>" . $wiersz['dataZadania']
                 . "," . $wiersz['miesiac'] . "</h6>"
                 . "<p>" . $wiersz['wpis'] . "</p>"
-                . "</section>";
+                . "</div>";
             }
         ?>
     </main>
@@ -61,4 +61,5 @@
         <p>Stronę wykonał: 00000000000</p>
     </footer>
 </body>
+
 </html>
