@@ -55,5 +55,8 @@
         ?>
         Stronę wykonał: 00000000000
     </footer>
+    <?php
+        mysqli_close($baza);            
+    ?>
 </body>
 </html>
