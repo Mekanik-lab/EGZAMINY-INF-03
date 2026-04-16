@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h1>Formularz rejestracyjny konferencji <em>Nasze Kwiaty</em></h1>
+    </header>
+    <main>
+        <form>
+            <section class="blok-formularza aktywny" id="pierwszy-blok-formularza">
+                <h2>Dane osobowe</h2>
+                <input type="text" placeholder="Wpisz imię..." id="imie" required>
+                <input type="text" placeholder="Wpisz nazwisko..." id="nazwisko" required>
+                <button type="button" id="nastepna-strona-1" onclick="zmienBlokZPierwszegoNaDrugi()">Następna karta</button>
+            </section>
+            <section class="blok-formularza" id="drugi-blok-formularza">
+                <h2>Dane kontaktowe</h2>
+                <input type="email" placeholder="Twój e-mail..." id="email">
+                <input type="tel" placeholder="Twój numer telefonu..." id="numerTelefonu">
+                <button type="button" id="nastepna-strona-2" onclick="zmienBlokZDrugiegoNaTrzeci()">Następna karta</button>
+            </section>
+            <section class="blok-formularza" id="trzeci-blok-formularza">
+                <h2>Hasło do logowania</h2>
+                <input type="password" placeholder="Podaj hasło" id="haslo">
+                <input type="password" placeholder="Powtórz hasło" id="powtorzHaslo">
+                <button type="button" id="zatwierdz" onclick="zatwierdzFormularz()">Zatwierdź</button>
+            </section>
+        </form>
+    </main>
+    <section class="stopka" id="pierwsza-stopka">
+        <video controls >
+            <source src="motyl.mp4" type="video/mp4">
+            Przeglądarka nie obsługuje tego formatu
+        </video>
+    </section>
+    <section class="stopka" id="druga-stopka">
+        <h3>Plan konferencji</h3>
+        <table>
+            <tr>
+                <td>9:00 - 12:00</td>
+                <td>Pielęgnacja roślin</td>
+            </tr>
+           <tr>
+                <td>13:00 - 15:00</td>
+                <td>Targi kwiatowe</td>
+            </tr>
+        </table>
+    </section>
+    <section class="stopka" id="trzecia-stopka">
+        <p><a href="https://kwiaty.pl/">Internetowa kwiaciarnia</a></p>
+    </section>
+    <section class="stopka" id="czwarta-stopka">
+        <p>Formularz wykonał: 00000000000</p>
+    </section>
+    <script>
+        function zmienBlokZPierwszegoNaDrugi() {
+            const blok1 = document.getElementById("pierwszy-blok-formularza");
+            const blok2 = document.getElementById("drugi-blok-formularza");
+
+            blok1.classList.remove("aktywny");
+            blok2.classList.add("aktywny");
+        }
+
+        function zmienBlokZDrugiegoNaTrzeci() {
+            const blok2 = document.getElementById("drugi-blok-formularza");
+            const blok3 = document.getElementById("trzeci-blok-formularza");
+
+            blok2.classList.remove("aktywny");
+            blok3.classList.add("aktywny");
+        }
+
+        function zatwierdzFormularz() {
+            const haslo = document.getElementById("haslo").value;
+            const powtorzoneHaslo = document.getElementById("powtorzHaslo").value;
+            const imie = document.getElementById("imie").value;
+            const nazwisko = document.getElementById("nazwisko").value;
+
+            if(haslo !== powtorzoneHaslo) {
+                alert("Podane hasła różnią się");
+            }
+
+            console.log(`Witaj ${imie} ${nazwisko}`);
+        }
+    </script>
+</body>
+</html>
