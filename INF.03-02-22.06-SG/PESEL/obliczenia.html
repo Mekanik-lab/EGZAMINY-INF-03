@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Całodobowa stacja paliw</h1>
+    </header>
+    <nav>
+        <a href="stacja.html"><img src="home.png" alt=""></a>
+        <a href="obliczenia.html"><img src="znak.png" alt=""></a>
+        <a href="kwerendy.txt">Pobierz dokumenty</a>
+    </nav>
+    <section id="lewy-blok">
+        <h2>Orientacyjny koszt paliwa</h2>
+        <form>
+            <label for="rodzaj-paliwa">Rodzaj paliwa (1-benzyna, 2-olejnapędowy):</label>
+            <br>
+            <input type="number" id="rodzaj-paliwa">
+            <br>
+            <label for="ilosc-paliwa">Ile litrów?</label>
+            <br>
+            <input type="number" id="ilosc-paliwa">
+            <br>
+            <button type="button" onclick="obliczCenePaliwa()">OBLICZ</button>
+            <div id="wynik"></div>
+        </form>
+    </section>
+    <section id="prawy-blok">
+        <img src="samochod.png" alt="samochód" id="samochod">
+    </section>
+    <footer>
+        <p>Stronę opracował: 00000000000</p>
+    </footer>
+    <script>
+        function obliczCenePaliwa() {
+            const rodzajPaliwa = document.getElementById("rodzaj-paliwa").value;
+            const iloscPaliwa = document.getElementById("ilosc-paliwa").value;
+            const wynik = document.getElementById("wynik");
+            let calkowityKoszt = 0;
+
+            if (rodzajPaliwa == 1) {
+                calkowityKoszt = iloscPaliwa * 4;
+                wynik.textContent = `koszt paliwa: ${calkowityKoszt} zł`;
+            } else if (rodzajPaliwa == 2) {
+                calkowityKoszt = iloscPaliwa * 3.5;
+                wynik.textContent = `koszt paliwa: ${calkowityKoszt} zł`;
+            } else {
+                calkowityKoszt = 0;
+                wynik.textContent = `koszt paliwa: ${calkowityKoszt} zł`;
+            }
+        }
+    </script>
+</body>
+</html>
