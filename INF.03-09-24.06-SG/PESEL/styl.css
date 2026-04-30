@@ -1,0 +1,66 @@
+* {
+    font-family: Georgia;
+}
+
+header, footer {
+    background-color: maroon;
+    text-align: center;
+    padding: 2px;
+    clear: both;
+}
+
+#lewy, #srodkowy ,#prawy {
+    background-color: lightsalmon;
+    height: 527px;
+    float: left
+}
+
+#lewy, #prawy {
+    width: 15%;
+}
+
+#srodkowy {
+    width: 70%;
+}
+
+#miniatury {
+    background-color: maroon;
+    height: 70px;
+    clear: both;
+}
+
+button {
+    background-color: lightsalmon;
+    color: maroon;
+    border: none;
+    font-size: 400%;
+    display: block;
+    margin: auto;
+    padding-top: 210px;
+}
+
+#miniatury img{
+    height: 70px;
+    animation: animacja 4s;
+}
+
+@keyframes animacja {
+    from {
+        padding-left: 50px;
+    }
+
+    to {
+        padding-left: 0px;
+    }
+}
+
+#srodkowy img{
+    display: block;
+    margin: auto;
+    padding-top: 45px;
+    transition: transform 5s ease;
+}
+
+#srodkowy img:hover {
+    transform: scale(1.2);
+}   
