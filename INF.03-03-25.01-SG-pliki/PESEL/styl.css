@@ -1,0 +1,65 @@
+body {
+    font-family: Bookman, Serif;
+}
+
+header, footer {
+    background-color: indigo;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    clear: both;
+}
+
+#lewy, #prawy {
+    background-color: Lavender;
+    height: 500px;
+    float: left;
+}
+
+#napis {
+    background-color: blueviolet;
+    padding: 10px;
+    text-align: right;
+    clear: both;
+}
+
+#lewy {
+    width: 25%;
+}
+
+#prawy {
+    width: 35%;
+}
+
+#srodkowy {
+    background-color: GhostWhite;
+    text-align: center;
+    height: 500px;
+    width: 40%;
+    float: left;
+}
+
+img {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+p {
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+}
+
+form, table {
+    margin: 30px;
+}
+
+table, td {
+    border-collapse: collapse;
+    border: 1px solid indigo;
+}
+
+td, th {
+    padding: 3px;
+}
