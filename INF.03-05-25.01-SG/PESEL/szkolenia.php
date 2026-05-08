@@ -34,6 +34,7 @@
                 echo "<p>" . $wiersz["Data"] . " " . $wiersz["Temat"] . "</p>";
                 fwrite($plik, $linia);
             }
+            fclose($plik);
         ?>
     </main>
     <footer>
