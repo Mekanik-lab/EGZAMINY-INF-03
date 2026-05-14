@@ -1,0 +1,45 @@
+<?php
+    $baza = mysqli_connect("localhost", "root", "", "wynajem");
+?>
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Wynajem pokoi</title>
+</head>
+<body>
+    <header>
+        <h1>Pensjonat pod dobrym humorem</h1>
+    </header>
+    <section id="lewy-blok">
+        <a href="index.html">GŁÓWNA</a>
+        <img src="1.jpeg" alt="pokoje">
+    </section>
+    <section id="srodkowy-blok">
+            <a href="cennik.php">CENNIK</a>
+            <table>
+                <?php
+                    $sql = "SELECT * FROM pokoje;";
+                    $zapytanie = mysqli_query($baza, $sql);
+                    while($wiersz = mysqli_fetch_assoc($zapytanie)) {
+                        echo "<tr>";
+                        echo "<td>" . $wiersz["id"] . "</td>";
+                        echo "<td>" . $wiersz["nazwa"] . "</td>";
+                        echo "<td>" . $wiersz["cena"] . "</td>";
+                        echo "</tr>";
+                    }
+                ?>
+            </table>
+    </section>
+    <section id="prawy-blok">
+        <a href="kalkulator.html">KALKULATOR</a>
+        <img src="2.jpeg" alt="pokoje">
+    </section>
+    <footer>
+        <p>Stronę opracował: 00000000000</p>
+    </footer>
+</body>
+</html>
