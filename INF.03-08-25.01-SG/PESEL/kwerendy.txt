@@ -1,0 +1,4 @@
+1.SELECT COUNT(*) FROM klienci;
+2.SELECT Nazwisko, Imie, zamowienia.id, kod_koloru, pojemnosc, data_odbioru FROM klienci INNER JOIN zamowienia ON klienci.Id = zamowienia.id_klienta ORDER BY data_odbioru ASC;
+3.SELECT Nazwisko, Imie, zamowienia.id, kod_koloru, pojemnosc, data_odbioru FROM klienci INNER JOIN zamowienia ON klienci.Id = zamowienia.id_klienta WHERE data_odbioru >= '2021-11-5' AND data_odbioru <= '2021-11-7' ORDER BY data_odbioru ASC;
+4.SELECT Imie, Nazwisko FROM klienci WHERE Plec = 'k';
