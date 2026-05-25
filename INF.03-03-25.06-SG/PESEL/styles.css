@@ -1,0 +1,63 @@
+* {
+    font-family: Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: LightCyan;
+}
+
+header, footer {
+    background-color: SteelBlue;
+    color: white;
+    padding: 10px;
+}
+
+article {
+    padding-top: 40px;
+    margin: 1%;
+    width: 98%;
+    display: block;
+}
+
+#pierwszy-artykul {
+    background-color: DodgerBlue;
+}
+
+#drugi-artykul {
+    background-color: LimeGreen;
+}
+
+#trzeci-artykul {
+    background-color: DarkOrchid;
+}
+
+img {
+    width: 70%;
+}
+
+p {
+    padding: 20px;
+}
+
+table {
+    margin: auto;
+    width: 70%;
+    border: 1px solid SteelBlue;
+}
+
+tr:hover {
+    background-color: SteelBlue;
+    color: white;
+}
+
+@media screen and (min-width: 800px) {
+    article {
+        width: 30%;
+    }
+
+    main {
+        display: flex;
+    }
+}
+
