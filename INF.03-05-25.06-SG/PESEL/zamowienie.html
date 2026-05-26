@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fotografia</title>
+</head>
+<body>
+    <header>
+        <h1>Fotografia artystyczna</h1>
+    </header>
+    <section id="obrazy">
+        <img src="1.jpg" alt="obrazy do sprzedaży" title="1.jpg">
+        <img src="2.jpg" alt="obrazy do sprzedaży" title="2.jpg">
+        <img src="3.jpg" alt="obrazy do sprzedaży" title="3.jpg">
+        <img src="4.jpg" alt="obrazy do sprzedaży" title="4.jpg">
+        <img src="5.jpg" alt="obrazy do sprzedaży" title="5.jpg">
+        <img src="6.jpg" alt="obrazy do sprzedaży" title="6.jpg">
+        <img src="7.jpg" alt="obrazy do sprzedaży" title="7.jpg">
+        <img src="8.jpg" alt="obrazy do sprzedaży" title="8.jpg">
+        <img src="9.jpg" alt="obrazy do sprzedaży" title="9.jpg">
+        <img src="10.jpg" alt="obrazy do sprzedaży" title="10.jpg">
+    </section>
+    <main>
+        <section id="lewa-sekcja">
+            <h3>Zamówienie</h3>
+            <label for="obraz">Wybierz obraz:</label>
+            <input type="file" accept="image/jpeg" id="obraz">
+            <br>
+            <label for="liczba-kopii">Liczba kopii:</label>
+            <input type="number" id="liczba-kopii">
+            <br>
+            <input type="radio" name="typ" id="papier-blyszczacy" value="blyszczacy" checked>
+            <label for="papier-blyszczacy">Papier błyszczący</label>
+            <br>
+            <input type="radio" name="typ" id="papier-matowy" value="matowy">
+            <label for="papier-matowy">Papier matowy</label>
+            <br>
+            <button onclick="dodajDoKoszyka()">Dodaj do koszyka</button>
+        </section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="regulamin.html">Regulamin</a>
+                </li>
+                <li>
+                    <a href="uslugi.html">Usługi</a>
+                </li>
+                <li>
+                    <a href="https://pixabay.com">Zdjęcia</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="prawa-sekcja">
+            <h3>Koszyk</h3>
+            <div id="wynik-skryptu">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Autor strony: 00000000000</p>
+    </footer>
+    <script src="skrypt.js"></script>
+</body>
+</html>
