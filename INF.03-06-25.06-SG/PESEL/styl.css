@@ -1,0 +1,42 @@
+* {
+    font-family: Cambria;
+}
+
+body {
+    background-color: mistyrose;
+}
+
+header, footer {
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+
+section {
+    background-color: plum;
+    height: 400px;
+    margin: 5px;
+    box-shadow: 4px 4px 10px dimgray;
+    overflow: hidden;
+    width: 22%;
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+@media screen and (max-width: 800px) {
+    section {
+        width: 100%;
+    }
+}
+
+h2 {
+    text-align: center;
+}
+
+button:hover {
+    background-color: #505050;
+    color: white;
+}
