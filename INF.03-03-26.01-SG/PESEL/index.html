@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Pola figur</title>
+</head>
+<body>
+    <header>
+        <h2>Pola figur płaskich</h2>
+    </header>
+    <main>
+        <nav>
+            <h3>MENU</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Prostokąt i trójkąt</a>
+                </li>
+                <li>
+                    <a href="kolo.html">Okrąg i koło</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <img src="1d.bmp" alt="Figura" id="figura">
+            <div>
+                <img src="1m.bmp" alt="Wybierz trójkąt" class="obraz" onclick="zmienObraz(1)">
+                <img src="2m.bmp" alt="Wybierz prostokąt" class="obraz" onclick="zmienObraz(2)">
+            </div>
+        </section>
+        <aside>
+            <h3>Pole prostokąta / pole trójkąta</h3>
+            <label for="bokPodstawa">Bok prostokąta / podstawa trójkąta:</label>
+            <br>
+            <input type="number" min="0" id="bokPodstawa">
+            <br>
+            <label for="bok2Wysokosc">Drugi bok prostokąta / wysokość trójkąta:</label>
+            <br>
+            <input type="number" min="0" id="bok2Wysokosc">
+            <br>
+            <button onclick="obliczPoleFigury()">Oblicz</button>
+            <br>
+            <p id="wynik"></p>
+        </aside>
+    </main>
+    <footer>
+        <p>Autor: 00000000000</p>
+    </footer>
+    <script>
+        function zmienObraz(obraz) {
+            const figura = document.getElementById("figura");
+            if (obraz === 1) {
+                figura.src = "1d.bmp";
+            } else if (obraz === 2) {
+                figura.src = "2d.bmp";
+            }
+        }
+
+        function obliczPoleFigury() {
+            const figura = document.getElementById("figura").src;
+            const bokPodstawa = Number(document.getElementById("bokPodstawa").value);
+            const bok2Wysokosc = Number(document.getElementById("bok2Wysokosc").value);
+            const wynikKontener = document.getElementById("wynik");
+            let wynik = 0;
+
+
+            if (figura.includes("1d.bmp")) {
+                wynik = 0.5 * bokPodstawa * bok2Wysokosc;
+                wynikKontener.textContent = wynik;
+            } else if (figura.includes("2d.bmp")) {
+                wynik = bokPodstawa * bok2Wysokosc;
+                wynikKontener.textContent = wynik;
+            }
+        }
+    </script>
+</body>
+</html>
