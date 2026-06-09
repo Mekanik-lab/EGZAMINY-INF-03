@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <title>Stylizacja paznokci</title>
+</head>
+<body>
+    <aside>
+        <img src="manicure.jpg" alt="Stylizacja paznokci">
+    </aside>
+    <main>
+        <header>
+            <h1>Twoje wymarzone paznokcie</h1>
+        </header>
+        <nav>
+            <button id="pierwszy-przycisk" onmouseover="zmienZakladke(1)">Kolor</button>
+            <button id="drugi-przycisk" onmouseover="zmienZakladke(2)">Kształt</button>
+            <button id="trzeci-przycisk" onmouseover="zmienZakladke(3)">Wzór</button>
+        </nav>
+        <section id="pierwsza-sekcja">
+            <h2>Kolor</h2>
+            <img src="kolory.png" alt="Kolory paznokci">
+            <br>
+            <input type="color" name="kolor" id="kolor" value="#FF0000">
+        </section>
+        <section id="druga-sekcja">
+            <h2>Kształt</h2>
+            <img src="ksztalt.png" alt="Kształty paznokci">
+            <br>
+            <select name="ksztalt" id="ksztalt">
+                <option value="migdał">migdał</option>
+                <option value="zaokrąglony">zaokrąglony</option>
+                <option value="kwadratowy">kwadratowy</option>
+                <option value="balerina">balerina</option>
+                <option value="zaokrąglony kwadrat">zaokrąglony kwadrat</option>
+            </select>
+        </section>
+        <section id="trzecia-sekcja">
+            <h2>Wzór</h2>
+            <script>
+                for(let i = 1; i <= 10; i++) {
+                    let img = document.createElement("img");
+                    img.src = i + ".jpg";
+                    img.classList.add("wzory");
+                    img.title = i;
+
+                    document.currentScript.parentElement.appendChild(img);
+                }
+            </script>
+            <br>
+            <input type="number" name="wzor" id="wzor" min="1" max="10">
+        </section>
+    </main>
+    <footer>
+        <p>Autor strony: <em>00000000000</em></p>
+    </footer>
+    <script>
+        const przycisk1 = document.getElementById("pierwszy-przycisk");
+        const przycisk2 = document.getElementById("drugi-przycisk");
+        const przycisk3 = document.getElementById("trzeci-przycisk");
+
+        const sekcja1 = document.getElementById("pierwsza-sekcja");
+        const sekcja2 = document.getElementById("druga-sekcja");
+        const sekcja3 = document.getElementById("trzecia-sekcja");
+
+        function zmienZakladke(numer) {
+            if(numer === 1) {
+                sekcja1.style.display = "block";
+                sekcja2.style.display = "none";
+                sekcja3.style.display = "none";
+
+                przycisk1.style.backgroundColor = "salmon";
+                przycisk2.style.backgroundColor = "crimson";
+                przycisk3.style.backgroundColor = "crimson";
+            } else if(numer === 2) {
+                sekcja1.style.display = "none";
+                sekcja2.style.display = "block";
+                sekcja3.style.display = "none";
+
+                przycisk1.style.backgroundColor = "crimson";
+                przycisk2.style.backgroundColor = "salmon";
+                przycisk3.style.backgroundColor = "crimson";
+            } else if(numer === 3) {
+                sekcja1.style.display = "none";
+                sekcja2.style.display = "none";
+                sekcja3.style.display = "block";
+
+                przycisk1.style.backgroundColor = "crimson";
+                przycisk2.style.backgroundColor = "crimson";
+                przycisk3.style.backgroundColor = "salmon";
+            }
+        }
+    </script>
+</body>
+</html>

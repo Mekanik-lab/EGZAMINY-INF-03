@@ -1,0 +1,67 @@
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: BlanchedAlmond;
+    text-align: center;
+}
+
+aside {
+    width: 20%;
+    float: left;
+}
+
+aside img {
+    width: 100%;
+}
+
+main {
+    width: 80%;
+    float: left;
+}
+
+nav {
+    text-align: left;
+    margin-left: 10%;
+}
+
+footer {
+    clear: both;
+}
+
+section {
+    background-color: salmon;
+    margin-left: 10%;
+    padding: 10px;
+    height: 250px;
+}
+
+#pierwsza-sekcja {
+    display: block;
+}
+
+#druga-sekcja, #trzecia-sekcja {
+    display: none;
+}
+
+button {
+    width: 26%;
+    color: white;
+    border: none;
+    font-size: 200%;
+}
+
+#pierwszy-przycisk {
+    background-color: salmon;
+}
+
+#drugi-przycisk, #trzeci-przycisk {
+    background-color: crimson;
+}
+
+.wzory {
+    width: 70px;
+    margin: 5px;
+    border-radius: 100%;
+}
